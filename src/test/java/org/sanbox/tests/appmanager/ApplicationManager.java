@@ -6,6 +6,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
   WebDriver driver;
@@ -33,6 +34,7 @@ public class ApplicationManager {
     navigationHelper = new NavigationHelper(driver);
     js = (JavascriptExecutor) driver;
     vars = new HashMap<>();
+    driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     driver.get("http://localhost/addressbook/");
     driver.manage().window().setSize(new Dimension(918, 1047));
     sessionHelper.login("admin", "secret");
