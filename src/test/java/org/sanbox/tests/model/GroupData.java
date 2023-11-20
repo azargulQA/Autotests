@@ -3,7 +3,7 @@ package org.sanbox.tests.model;
 import java.util.Objects;
 
 public class GroupData {
-public final String id;
+public int id = 0;
 public final String name;
 public final String header;
 public final String footer;
@@ -11,12 +11,12 @@ public final String footer;
 
 
 public  GroupData(String name, String header, String footer) {
-  this.id = null;
+  this.id = 0;
   this.name = name;
   this.header = header;
   this.footer = footer;
   }
-public  GroupData(String id, String name, String header, String footer) {
+public  GroupData(int id, String name, String header, String footer) {
   this.id = id;
   this.name = name;
   this.header = header;
@@ -34,9 +34,28 @@ public String getFooter() {
   return footer;
 }
 
-public String getId() {
+public int getId() {
   return id;
 }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+
+  public String name() {
+    return name;
+  }
+
+  public String header() {
+    return header;
+  }
+
+  public String footer() {
+  return footer;
+}
+
+
 
   @Override
   public String toString() {
@@ -58,16 +77,4 @@ public String getId() {
   public int hashCode() {
     return Objects.hash(id, name);
   }
-
-  public String name() {
-    return name;
-  }
-
-  public String header() {
-    return header;
-  }
-
-  public String footer() {
-  return footer;
-}
 }

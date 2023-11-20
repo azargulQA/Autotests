@@ -3,7 +3,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.sanbox.tests.model.GroupData;
 
-import java.util.HashSet;
 import java.util.List;
 
 public class GroupDeletionTest extends TestBase {
