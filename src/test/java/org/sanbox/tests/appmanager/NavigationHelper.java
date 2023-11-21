@@ -2,7 +2,6 @@ package org.sanbox.tests.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class NavigationHelper extends HelperBase {
 
@@ -10,7 +9,7 @@ public class NavigationHelper extends HelperBase {
     super(driver);
   }
 
-  public void goToGroupPage() {
+  public void groupPage() {
     click(By.linkText("groups"));
   }
 

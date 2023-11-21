@@ -1,7 +1,9 @@
 package org.sanbox.tests.tests;
 
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.Browser;
 import org.sanbox.tests.appmanager.ApplicationManager;
 
