@@ -1,6 +1,8 @@
 package org.sanbox.tests.model;
 
 
+import java.util.Objects;
+
 public class GroupData {
 private int id = Integer.MAX_VALUE;
 private String name;
@@ -61,12 +63,15 @@ public int getId() {
 
     GroupData groupData = (GroupData) o;
 
-    return name != null ? name.equals(groupData.name) : groupData.name == null;
+   if ( id != groupData.id) return false;
+   return name != null ? name.equals(groupData.name) : groupData.name == null;
+
   }
 
   @Override
   public int hashCode() {
-    return name != null ? name.hashCode() : 0;
+    int result = id;
+    result = 31 * result + (name != null ? name.hashCode() : 0);
+    return result;
   }
-
 }
